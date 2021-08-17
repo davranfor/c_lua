@@ -6,6 +6,6 @@ mv lua-5.4.3 lua
 cd lua
 make linux
 cd ..
-gcc -std=c11 -Wall -Wpedantic -o demo demo.c -I./lua/src -L./lua/src -llua -lm -ldl
+make
 ./demo
 
