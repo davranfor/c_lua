@@ -25,12 +25,12 @@ static int avg_and_sum(lua_State *L)
 }
 
 // Lua callable functions
-static double square(lua_State *L, lua_Number number)
+static double square(lua_State *L, lua_Number num)
 {
     // push the square function on the top of the lua stack
     lua_getglobal(L, "square");
     // push the argument (the number) on the stack 
-    lua_pushnumber(L, number);
+    lua_pushnumber(L, num);
     // call the function with 1 argument, returning a single result.
     lua_call(L, 1, 1);
     // get the result from the lua stack
@@ -41,12 +41,12 @@ static double square(lua_State *L, lua_Number number)
     return result;
 }
 
-static void capitalize(lua_State *L, const char *string)
+static void capitalize(lua_State *L, const char *str)
 {
     lua_getglobal(L, "capitalize");
-    lua_pushstring(L, string);
+    lua_pushstring(L, str);
     lua_call(L, 1, 1);
-    printf("capitalize(world) = %s\n", lua_tostring(L, -1));
+    printf("capitalize(%s) = %s\n", str, lua_tostring(L, -1));
     lua_pop(L, 1);
 }
 
