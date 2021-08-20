@@ -15,6 +15,6 @@ demo: $(OBJECTS)
 clean:
 	rm -f *.o demo
 
-# Direct
+# Direct:
 # gcc -std=c11 -Wall -Wpedantic -o demo main.c -I./lua/src -L./lua/src -llua -lm -ldl
 

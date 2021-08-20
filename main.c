@@ -33,6 +33,7 @@ static double square(lua_State *L, lua_Number num)
     lua_pushnumber(L, num);
     // call the function with 1 argument, returning a single result.
     lua_call(L, 1, 1);
+
     // get the result from the lua stack
     double result = lua_tonumber(L, -1);
 

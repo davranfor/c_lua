@@ -33,35 +33,3 @@ function locals()
     end
 end
 
-function fibonacci(n)
-    locals()
-    if n < 3 then
-        return 1
-    else
-        return fibonacci(n - 1) + fibonacci(n - 2)
-    end
-end
-
-for n = 1, 7 do
-    print("Debugging --------------------------------------------------------")
-    io.write("fibonacci(", n, ") = ", fibonacci(n), "\n")
-    print("End debugging ----------------------------------------------------")
-end
-
-io.write("\n")
-
-local array = {}
-array[1] = "david"
-array[2] = "elena"
-
-local dict = {}
-dict["david"] = "feo"
-dict["elena"] = 50
-
-local pi = 3.14
-local str = "En un lugar de la mancha"
-
-print("Debugging --------------------------------------------------------")
-locals()
-print("End debugging ----------------------------------------------------")
-
