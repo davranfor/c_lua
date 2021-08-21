@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS += -std=c11 -Wpedantic -Wall -Wextra -Wmissing-prototypes -Wstrict-prototypes -Wconversion -Wshadow -Wcast-qual -Wnested-externs
 CFLAGS += -fsanitize=address -fno-omit-frame-pointer -g
-CFLAGS += -I./lua/src -L./lua/src
+CFLAGS += -I/usr/local/include -L/usr/local/lib
 LDFLAGS = -llua -lm -ldl
 OBJECTS = main.o
 
